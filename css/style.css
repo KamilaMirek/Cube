@@ -5,6 +5,10 @@
           box-sizing: border-box;
 }
 
+body {
+  background-color: rgba(241, 241, 241, 0.856);
+}
+
 .container-fluid {
   width: 100%;
 }
@@ -68,7 +72,7 @@
 
 .header-main > div > h2 {
   font-family: "Raleway", sans-serif;
-  font-size: 24px;
+  font-size: 30px;
   font-weight: 300;
   color: #fff;
   text-align: center;
@@ -81,14 +85,15 @@
   color: #fff;
   text-align: center;
   line-height: 2;
+  padding: 15px;
 }
 
 .header-main > div > a {
   display: block;
   font-family: "Raleway", sans-serif;
-  font-size: 18px;
+  font-size: 10px;
   font-weight: 400;
-  padding: 15px;
+  padding: 13px;
   text-transform: uppercase;
   color: #2bc3c0;
   text-align: center;
@@ -129,7 +134,71 @@
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  background-color: rgba(247, 244, 244, 0.856);
+  padding: 50px;
+}
+
+.video > h2 {
+  font-family: "Raleway", sans-serif;
+  font-size: 24px;
+  font-weight: 300;
+  text-align: center;
+}
+
+.video > p {
+  font-family: "Raleway", sans-serif;
+  font-size: 15px;
+  font-weight: 300;
+  text-align: center;
+  line-height: 2;
+  padding: 15px;
+}
+
+.video > a {
+  font-family: "Raleway", sans-serif;
+  font-size: 10px;
+  font-weight: 400;
+  padding: 13px;
+  text-transform: uppercase;
+  text-align: center;
+  text-decoration: none;
+  color: black;
+  background-color: #07c284;
+}
+
+.offers {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.offer {
+  background-color: #fff;
+}
+
+.offer > h2 {
+  font-family: "Raleway", sans-serif;
+  font-size: 15px;
+  font-weight: 300;
+  text-align: center;
+}
+
+.offer > p {
+  font-family: "Raleway", sans-serif;
+  font-size: 10px;
+  font-weight: 300;
+  text-align: center;
+  line-height: 1.5;
+  padding: 15px;
 }
 
 @media (min-width: 576px) {

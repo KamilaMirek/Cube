@@ -3,7 +3,9 @@
   padding: 0;
   box-sizing: border-box;
 }
-
+body {
+  background-color: rgba(241, 241, 241, 0.856);
+}
 .container-fluid {
   width: 100%;
 }
@@ -12,7 +14,7 @@
   width: 100%;
   margin: 0 auto;
 }
-.hidden{
+.hidden {
   display: none;
 }
 
@@ -43,7 +45,7 @@
     max-width: 260px;
   }
   > div {
-    padding:30px;
+    padding: 30px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -51,7 +53,7 @@
   }
   > div > h2 {
     font-family: "Raleway", sans-serif;
-    font-size: 24px;
+    font-size: 30px;
     font-weight: 300;
     color: #fff;
     text-align: center;
@@ -63,13 +65,14 @@
     color: #fff;
     text-align: center;
     line-height: 2;
+    padding: 15px;
   }
   > div > a {
     display: block;
     font-family: "Raleway", sans-serif;
-    font-size: 18px;
+    font-size: 10px;
     font-weight: 400;
-    padding: 15px;
+    padding: 13px;
     text-transform: uppercase;
     color: #2bc3c0;
     text-align: center;
@@ -78,25 +81,72 @@
   }
 }
 
-.clients{
-  display:flex;
+.clients {
+  display: flex;
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
   background-color: rgba(236, 236, 236, 0.856);
-  >img{
+  > img {
     padding: 30px;
   }
 }
 
-.video{
+.video {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background-color: rgba(247, 244, 244, 0.856);
-  >h2{
-    
+
+  padding: 50px;
+  > h2 {
+    font-family: "Raleway", sans-serif;
+    font-size: 24px;
+    font-weight: 300;
+    text-align: center;
+  }
+  > p {
+    font-family: "Raleway", sans-serif;
+    font-size: 15px;
+    font-weight: 300;
+    text-align: center;
+    line-height: 2;
+    padding: 15px;
+  }
+  > a {
+    font-family: "Raleway", sans-serif;
+    font-size: 10px;
+    font-weight: 400;
+    padding: 13px;
+    text-transform: uppercase;
+    text-align: center;
+    text-decoration: none;
+    color: black;
+    background-color: rgb(7, 194, 132);
+  }
+}
+
+.offers {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.offer {
+  background-color: #fff;
+  > h2 {
+    font-family: "Raleway", sans-serif;
+    font-size: 15px;
+    font-weight: 300;
+    text-align: center;
+  }
+  > p {
+    font-family: "Raleway", sans-serif;
+    font-size: 10px;
+    font-weight: 300;
+    text-align: center;
+    line-height: 1.5;
+    padding: 15px;
   }
 }
 
@@ -146,13 +196,13 @@
       display: flex;
       flex-direction: column;
       align-items: flex-start;
-      >p{
+      > p {
         text-align: start;
       }
-      >a{
+      > a {
         text-align: start;
       }
-      h2{
+      h2 {
         text-align: start;
       }
     }
