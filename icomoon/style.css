@@ -1,0 +1,83 @@
+@font-face {
+  font-family: 'icomoon';
+  src:  url('fonts/icomoon.eot?78cafm');
+  src:  url('fonts/icomoon.eot?78cafm#iefix') format('embedded-opentype'),
+    url('fonts/icomoon.ttf?78cafm') format('truetype'),
+    url('fonts/icomoon.woff?78cafm') format('woff'),
+    url('fonts/icomoon.svg?78cafm#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-paint-brush .path1:before {
+  content: "\e900";
+  color: rgb(43, 171, 135);
+}
+.icon-paint-brush .path2:before {
+  content: "\e901";
+  margin-left: -1em;
+  color: rgb(150, 228, 193);
+}
+.icon-paint-brush .path3:before {
+  content: "\e902";
+  margin-left: -1em;
+  color: rgb(43, 171, 135);
+}
+.icon-paint-brush .path4:before {
+  content: "\e903";
+  margin-left: -1em;
+  color: rgb(43, 171, 135);
+}
+.icon-search .path1:before {
+  content: "\e904";
+  color: rgb(43, 171, 135);
+}
+.icon-search .path2:before {
+  content: "\e905";
+  margin-left: -1em;
+  color: rgb(150, 228, 193);
+}
+.icon-search .path3:before {
+  content: "\e906";
+  margin-left: -1em;
+  color: rgb(43, 171, 135);
+}
+.icon-search .path4:before {
+  content: "\e907";
+  margin-left: -1em;
+  color: rgb(43, 171, 135);
+}
+.icon-menu .path1:before {
+  content: "\e908";
+  color: rgb(150, 228, 193);
+}
+.icon-menu .path2:before {
+  content: "\e909";
+  margin-left: -1em;
+  color: rgb(150, 228, 193);
+}
+.icon-menu .path3:before {
+  content: "\e90a";
+  margin-left: -1em;
+  color: rgb(150, 228, 193);
+}
+.icon-menu .path4:before {
+  content: "\e90b";
+  margin-left: -1em;
+  color: rgb(43, 171, 135);
+}

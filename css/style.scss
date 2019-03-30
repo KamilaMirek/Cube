@@ -1,11 +1,22 @@
+// ===============================BASE=====================================
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
-body {
-  background-color: rgba(241, 241, 241, 0.856);
+
+.hidden {
+  display: none;
 }
+
+.hidden-xs {
+  display: none;
+}
+
+$background-grey: rgba(241, 241, 241, 0.856);
+$background-dark: rgb(58, 57, 57);
+
+// =============================HEADER-MAIN====================================
 .container-fluid {
   width: 100%;
 }
@@ -13,13 +24,6 @@ body {
 .container {
   width: 100%;
   margin: 0 auto;
-}
-.hidden {
-  display: none;
-}
-
-.hidden-xs {
-  display: none;
 }
 
 .header-main-fluid {
@@ -80,30 +84,31 @@ body {
     background-color: #fff;
   }
 }
-
+// =============================CLIENTS====================================
 .clients {
+  background-color: $background-grey;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
-  background-color: rgba(236, 236, 236, 0.856);
   > img {
     padding: 30px;
   }
 }
-
-.video {
+// =============================HEADER====================================
+.header {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-
   padding: 50px;
   > h2 {
     font-family: "Raleway", sans-serif;
     font-size: 24px;
     font-weight: 300;
     text-align: center;
+    text-transform: capitalize;
+    padding: 15px;
   }
   > p {
     font-family: "Raleway", sans-serif;
@@ -111,13 +116,13 @@ body {
     font-weight: 300;
     text-align: center;
     line-height: 2;
-    padding: 15px;
   }
   > a {
     font-family: "Raleway", sans-serif;
     font-size: 10px;
     font-weight: 400;
-    padding: 13px;
+    padding: 10px;
+    margin: 15px;
     text-transform: uppercase;
     text-align: center;
     text-decoration: none;
@@ -125,7 +130,25 @@ body {
     background-color: rgb(7, 194, 132);
   }
 }
+.header-grey {
+  background-color: $background-grey;
+}
 
+.header-dark {
+  background-color: $background-dark;
+  > h2,
+  a {
+    color: #fff;
+  }
+  > p {
+    color: $background-grey;
+  }
+  > a {
+    background-color: $background-dark;
+    border-style: solid;
+  }
+}
+// =============================OFFERS====================================
 .offers {
   display: flex;
   align-items: center;
@@ -134,6 +157,10 @@ body {
 }
 .offer {
   background-color: #fff;
+  width: 60%;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.19), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  margin: 20px;
+
   > h2 {
     font-family: "Raleway", sans-serif;
     font-size: 15px;
@@ -150,6 +177,139 @@ body {
   }
 }
 
+// =============================PRODUCTS====================================
+.products {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+
+  > :first-child {
+    background-color: coral;
+  }
+  > :nth-child(2) {
+    background-color: violet;
+  }
+  > :nth-child(3) {
+    background-color: gainsboro;
+    height: 500px;
+  }
+  > :nth-child(4) {
+    background-color: lightgreen;
+  }
+  > :last-child {
+    background-color: darkgreen;
+  }
+  div {
+    width: 100% vw;
+    height: 250px;
+    margin: 20px;
+  }
+}
+
+// =============================RECOMENDATIONS====================================
+.recomendations {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: $background-grey;
+  > div {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 20px;
+    > div {
+      align-items: center;
+      display: flex;
+      flex-direction: column;
+      h3 {
+        font-family: "Raleway", sans-serif;
+        font-size: 10px;
+        font-weight: 300;
+        text-align: center;
+        line-height: 1.5;
+        padding: 15px;
+        font-style: italic;
+      }
+      p {
+        font-family: "Raleway", sans-serif;
+        font-size: 10px;
+        font-weight: bold;
+        text-align: center;
+        line-height: 1.5;
+        font-style: italic;
+      }
+    }
+  }
+}
+.circle {
+  background-color: gray;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+}
+// ==================================MAP====================================
+.map {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  background-color: $background-dark;
+  flex-wrap: wrap;
+  > div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding:15px;
+
+    > h2 {
+      text-align: center;
+      color: #fff;
+    }
+    > p {
+    font-family: "Raleway", sans-serif;
+    font-size: 15px;
+    font-weight: 300;
+    text-align: center;
+    line-height: 2;
+    }
+    > a {
+      color: aqua;
+      text-decoration: none;
+      text-transform: uppercase;
+      font-size:10px;
+      padding: 3px;
+    }
+  }
+}
+.text{
+  color:grey;
+}
+.contact{
+  >p{
+    color:aqua;
+  }
+}
+// ==================================FOOTER====================================
+.footer{
+  background-color:rgb(22, 22, 22);
+  display: flex;
+  justify-content: center;
+  // justify-content: space-between;
+  >p{
+    display: block;
+    color:gray;
+    text-transform: capitalize;
+    font-family: "Raleway", sans-serif;
+    font-size: 10px;
+    font-weight: 300;
+    text-align: center;
+    line-height: 2;
+  }
+  a{
+    color:aqua;
+  }
+}
 // =============================MEDIA NA KOŃCU====================================
 @media (min-width: 576px) {
   .container {

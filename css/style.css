@@ -5,8 +5,12 @@
           box-sizing: border-box;
 }
 
-body {
-  background-color: rgba(241, 241, 241, 0.856);
+.hidden {
+  display: none;
+}
+
+.hidden-xs {
+  display: none;
 }
 
 .container-fluid {
@@ -16,14 +20,6 @@ body {
 .container {
   width: 100%;
   margin: 0 auto;
-}
-
-.hidden {
-  display: none;
-}
-
-.hidden-xs {
-  display: none;
 }
 
 .header-main-fluid {
@@ -102,6 +98,7 @@ body {
 }
 
 .clients {
+  background-color: rgba(241, 241, 241, 0.856);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -113,14 +110,13 @@ body {
           align-items: center;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  background-color: rgba(236, 236, 236, 0.856);
 }
 
 .clients > img {
   padding: 30px;
 }
 
-.video {
+.header {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -137,32 +133,56 @@ body {
   padding: 50px;
 }
 
-.video > h2 {
+.header > h2 {
   font-family: "Raleway", sans-serif;
   font-size: 24px;
   font-weight: 300;
   text-align: center;
+  text-transform: capitalize;
+  padding: 15px;
 }
 
-.video > p {
+.header > p {
   font-family: "Raleway", sans-serif;
   font-size: 15px;
   font-weight: 300;
   text-align: center;
   line-height: 2;
-  padding: 15px;
 }
 
-.video > a {
+.header > a {
   font-family: "Raleway", sans-serif;
   font-size: 10px;
   font-weight: 400;
-  padding: 13px;
+  padding: 10px;
+  margin: 15px;
   text-transform: uppercase;
   text-align: center;
   text-decoration: none;
   color: black;
   background-color: #07c284;
+}
+
+.header-grey {
+  background-color: rgba(241, 241, 241, 0.856);
+}
+
+.header-dark {
+  background-color: #3a3939;
+}
+
+.header-dark > h2,
+.header-dark a {
+  color: #fff;
+}
+
+.header-dark > p {
+  color: rgba(241, 241, 241, 0.856);
+}
+
+.header-dark > a {
+  background-color: #3a3939;
+  border-style: solid;
 }
 
 .offers {
@@ -183,6 +203,10 @@ body {
 
 .offer {
   background-color: #fff;
+  width: 60%;
+  -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.19), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+          box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.19), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  margin: 20px;
 }
 
 .offer > h2 {
@@ -199,6 +223,200 @@ body {
   text-align: center;
   line-height: 1.5;
   padding: 15px;
+}
+
+.products {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.products > :first-child {
+  background-color: coral;
+}
+
+.products > :nth-child(2) {
+  background-color: violet;
+}
+
+.products > :nth-child(3) {
+  background-color: gainsboro;
+  height: 500px;
+}
+
+.products > :nth-child(4) {
+  background-color: lightgreen;
+}
+
+.products > :last-child {
+  background-color: darkgreen;
+}
+
+.products div {
+  width: 100% vw;
+  height: 250px;
+  margin: 20px;
+}
+
+.recomendations {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: rgba(241, 241, 241, 0.856);
+}
+
+.recomendations > div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 20px;
+}
+
+.recomendations > div > div {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.recomendations > div > div h3 {
+  font-family: "Raleway", sans-serif;
+  font-size: 10px;
+  font-weight: 300;
+  text-align: center;
+  line-height: 1.5;
+  padding: 15px;
+  font-style: italic;
+}
+
+.recomendations > div > div p {
+  font-family: "Raleway", sans-serif;
+  font-size: 10px;
+  font-weight: bold;
+  text-align: center;
+  line-height: 1.5;
+  font-style: italic;
+}
+
+.circle {
+  background-color: gray;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+}
+
+.map {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  background-color: #3a3939;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.map > div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 15px;
+}
+
+.map > div > h2 {
+  text-align: center;
+  color: #fff;
+}
+
+.map > div > p {
+  font-family: "Raleway", sans-serif;
+  font-size: 15px;
+  font-weight: 300;
+  text-align: center;
+  line-height: 2;
+}
+
+.map > div > a {
+  color: aqua;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 10px;
+  padding: 3px;
+}
+
+.text {
+  color: grey;
+}
+
+.contact > p {
+  color: aqua;
+}
+
+.footer {
+  background-color: #161616;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.footer > p {
+  display: block;
+  color: gray;
+  text-transform: capitalize;
+  font-family: "Raleway", sans-serif;
+  font-size: 10px;
+  font-weight: 300;
+  text-align: center;
+  line-height: 2;
+}
+
+.footer a {
+  color: aqua;
 }
 
 @media (min-width: 576px) {
