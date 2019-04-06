@@ -9,8 +9,12 @@
   display: none;
 }
 
-.hidden-xs {
-  display: none;
+@font-face {
+  font-family: 'icomoon';
+  src: url("../icomoon/fonts/icomoon.eot?loo5ib");
+  src: url("../icomoon/fonts/icomoon.eot?loo5ib#iefix") format("embedded-opentype"), url("../icomoon/fonts/icomoon.ttf?loo5ib") format("truetype"), url("../icomoon/fonts/icomoon.woff?loo5ib") format("woff"), url("../icomoon/fonts/icomoon.svg?loo5ib#icomoon") format("svg");
+  font-weight: normal;
+  font-style: normal;
 }
 
 .container-fluid {
@@ -195,18 +199,20 @@
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
 .offer {
   background-color: #fff;
-  width: 60%;
+  width: 200px;
   -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.19), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
           box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.19), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   margin: 20px;
+}
+
+.offer > span {
+  font-family: 'icomoon';
 }
 
 .offer > h2 {
@@ -214,6 +220,7 @@
   font-size: 15px;
   font-weight: 300;
   text-align: center;
+  padding-top: 15px;
 }
 
 .offer > p {
@@ -235,6 +242,12 @@
           flex-direction: column;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .products > :first-child {
@@ -247,7 +260,7 @@
 
 .products > :nth-child(3) {
   background-color: gainsboro;
-  height: 500px;
+  height: 440px;
 }
 
 .products > :nth-child(4) {
@@ -259,8 +272,8 @@
 }
 
 .products div {
-  width: 100% vw;
-  height: 250px;
+  width: 300px;
+  height: 200px;
   margin: 20px;
 }
 
@@ -268,10 +281,8 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -285,15 +296,14 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
   padding: 20px;
 }
 
@@ -308,9 +318,13 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
 }
 
 .recomendations > div > div h3 {
+  display: block;
   font-family: "Raleway", sans-serif;
   font-size: 10px;
   font-weight: 300;
@@ -321,6 +335,7 @@
 }
 
 .recomendations > div > div p {
+  display: block;
   font-family: "Raleway", sans-serif;
   font-size: 10px;
   font-weight: bold;
@@ -330,6 +345,7 @@
 }
 
 .circle {
+  display: block;
   background-color: gray;
   border-radius: 50%;
   width: 50px;
@@ -362,7 +378,7 @@
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  padding: 15px;
+  padding: 15px 45px;
 }
 
 .map > div > h2 {
@@ -394,14 +410,22 @@
   color: aqua;
 }
 
-.footer {
-  background-color: #161616;
+footer {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #161616;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.footer {
+  padding: 5px;
 }
 
 .footer > p {
@@ -415,19 +439,13 @@
   line-height: 2;
 }
 
-.footer a {
+.footer > a {
   color: aqua;
 }
 
 @media (min-width: 576px) {
   .container {
-    width: 540px;
-  }
-  .hidden-xs {
-    display: block;
-  }
-  .hidden-sm {
-    display: none;
+    width: 560px;
   }
 }
 
@@ -435,23 +453,11 @@
   .container {
     width: 720px;
   }
-  .hidden-sm {
-    display: block;
-  }
-  .hidden-md {
-    display: none;
-  }
 }
 
 @media (min-width: 992px) {
   .container {
     width: 960px;
-  }
-  .hidden-md {
-    display: block;
-  }
-  .hidden-lg {
-    display: none;
   }
   .header-main {
     display: -webkit-box;
@@ -488,23 +494,44 @@
   .header-main > div > a {
     text-align: start;
   }
-  .header-main > div h2 {
+  .header-main > div > h2 {
     text-align: start;
   }
   .header-main > img {
     max-width: 300px;
+  }
+  .products {
+    height: 500px;
+  }
+  .offers {
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
+  .offer > p, .offer h2 {
+    text-align: left;
+    padding: 10px;
+  }
+  .recomendations {
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
+  .recomendations > div {
+    width: 50%;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
+  .text {
+    width: 50%;
+  }
+  .map > div > h2,
+  .map > div p {
+    text-align: left;
   }
 }
 
 @media (min-width: 1200px) {
   .container {
     width: 1140px;
-  }
-  .hidden-lg {
-    display: block;
-  }
-  .hidden-xl {
-    display: none;
   }
 }
 /*# sourceMappingURL=style.css.map */

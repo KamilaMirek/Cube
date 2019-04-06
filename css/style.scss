@@ -5,17 +5,23 @@
   box-sizing: border-box;
 }
 
-.hidden {
-  display: none;
-}
-
-.hidden-xs {
+.hidden{
   display: none;
 }
 
 $background-grey: rgba(241, 241, 241, 0.856);
 $background-dark: rgb(58, 57, 57);
 
+@font-face {
+  font-family: 'icomoon';
+  src:  url('../icomoon/fonts/icomoon.eot?loo5ib');
+  src:  url('../icomoon/fonts/icomoon.eot?loo5ib#iefix') format('embedded-opentype'),
+    url('../icomoon/fonts/icomoon.ttf?loo5ib') format('truetype'),
+    url('../icomoon/fonts/icomoon.woff?loo5ib') format('woff'),
+    url('../icomoon/fonts/icomoon.svg?loo5ib#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
 // =============================HEADER-MAIN====================================
 .container-fluid {
   width: 100%;
@@ -153,19 +159,24 @@ $background-dark: rgb(58, 57, 57);
   display: flex;
   align-items: center;
   justify-content: center;
-  flex-direction: column;
+  flex-wrap: wrap;
 }
 .offer {
   background-color: #fff;
-  width: 60%;
+  width: 200px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.19), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   margin: 20px;
+  
+  >span{
+    font-family: 'icomoon';
+  }
 
   > h2 {
     font-family: "Raleway", sans-serif;
     font-size: 15px;
     font-weight: 300;
     text-align: center;
+    padding-top: 15px;
   }
   > p {
     font-family: "Raleway", sans-serif;
@@ -182,7 +193,9 @@ $background-dark: rgb(58, 57, 57);
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
-
+  align-items: center;
+  justify-content: center;
+ 
   > :first-child {
     background-color: coral;
   }
@@ -191,7 +204,7 @@ $background-dark: rgb(58, 57, 57);
   }
   > :nth-child(3) {
     background-color: gainsboro;
-    height: 500px;
+    height: 440px;
   }
   > :nth-child(4) {
     background-color: lightgreen;
@@ -200,8 +213,8 @@ $background-dark: rgb(58, 57, 57);
     background-color: darkgreen;
   }
   div {
-    width: 100% vw;
-    height: 250px;
+    width: 300px;
+    height: 200px;
     margin: 20px;
   }
 }
@@ -209,21 +222,23 @@ $background-dark: rgb(58, 57, 57);
 // =============================RECOMENDATIONS====================================
 .recomendations {
   display: flex;
-  flex-direction: column;
+  flex-wrap: wrap;
   justify-content: center;
   align-items: center;
   background-color: $background-grey;
   > div {
     display: flex;
-    flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
+    align-items: flex-start;
     padding: 20px;
     > div {
       align-items: center;
       display: flex;
       flex-direction: column;
+      justify-content: flex-start;
       h3 {
+        display: block;
         font-family: "Raleway", sans-serif;
         font-size: 10px;
         font-weight: 300;
@@ -233,6 +248,7 @@ $background-dark: rgb(58, 57, 57);
         font-style: italic;
       }
       p {
+        display: block;
         font-family: "Raleway", sans-serif;
         font-size: 10px;
         font-weight: bold;
@@ -244,6 +260,7 @@ $background-dark: rgb(58, 57, 57);
   }
 }
 .circle {
+  display: block;
   background-color: gray;
   border-radius: 50%;
   width: 50px;
@@ -260,45 +277,49 @@ $background-dark: rgb(58, 57, 57);
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding:15px;
+    padding: 15px 45px;
 
     > h2 {
       text-align: center;
       color: #fff;
     }
     > p {
-    font-family: "Raleway", sans-serif;
-    font-size: 15px;
-    font-weight: 300;
-    text-align: center;
-    line-height: 2;
+      font-family: "Raleway", sans-serif;
+      font-size: 15px;
+      font-weight: 300;
+      text-align: center;
+      line-height: 2;
     }
     > a {
       color: aqua;
       text-decoration: none;
       text-transform: uppercase;
-      font-size:10px;
+      font-size: 10px;
       padding: 3px;
     }
   }
 }
-.text{
-  color:grey;
+.text {
+  color: grey;
 }
-.contact{
-  >p{
-    color:aqua;
+.contact {
+  > p {
+    color: aqua;
   }
 }
 // ==================================FOOTER====================================
-.footer{
-  background-color:rgb(22, 22, 22);
+footer {
   display: flex;
-  justify-content: center;
-  // justify-content: space-between;
-  >p{
+  justify-content: space-around;
+  align-items: center;
+  background-color: rgb(22, 22, 22);
+  flex-wrap: wrap;
+}
+.footer {
+  padding: 5px;
+  > p {
     display: block;
-    color:gray;
+    color: gray;
     text-transform: capitalize;
     font-family: "Raleway", sans-serif;
     font-size: 10px;
@@ -306,20 +327,14 @@ $background-dark: rgb(58, 57, 57);
     text-align: center;
     line-height: 2;
   }
-  a{
-    color:aqua;
+  > a {
+    color: aqua;
   }
 }
 // =============================MEDIA NA KOŃCU====================================
 @media (min-width: 576px) {
   .container {
-    width: 540px;
-  }
-  .hidden-xs {
-    display: block;
-  }
-  .hidden-sm {
-    display: none;
+    width: 560px;
   }
 }
 
@@ -327,22 +342,11 @@ $background-dark: rgb(58, 57, 57);
   .container {
     width: 720px;
   }
-  .hidden-sm {
-    display: block;
-  }
-  .hidden-md {
-    display: none;
-  }
 }
 @media (min-width: 992px) {
+  // ===HEADER===
   .container {
     width: 960px;
-  }
-  .hidden-md {
-    display: block;
-  }
-  .hidden-lg {
-    display: none;
   }
   .header-main {
     display: flex;
@@ -362,7 +366,7 @@ $background-dark: rgb(58, 57, 57);
       > a {
         text-align: start;
       }
-      h2 {
+      > h2 {
         text-align: start;
       }
     }
@@ -370,15 +374,44 @@ $background-dark: rgb(58, 57, 57);
       max-width: 300px;
     }
   }
+  // ===PRODUCTS===
+ .products{
+  height: 500px;
+ }
+  // ===OFFERS===
+  .offers{
+    justify-content: space-around;
+  }
+  .offer{
+    >p,h2{
+      text-align: left;
+      padding:10px;
+    }
+  }
+  // ===RECOMENDATIONS===
+  .recomendations {
+    justify-content: space-around;
+    > div {
+      width:50%;
+      justify-content: space-around;
+    }
+  }
+  // ====MAP===
+  .text {
+    width: 50%;
+  }
+  .map {
+    > div {
+      > h2,
+      p {
+        text-align: left;
+      }
+    }
+  }
 }
+
 @media (min-width: 1200px) {
   .container {
     width: 1140px;
-  }
-  .hidden-lg {
-    display: block;
-  }
-  .hidden-xl {
-    display: none;
   }
 }
